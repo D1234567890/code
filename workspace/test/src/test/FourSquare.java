@@ -1,0 +1,30 @@
+package test;
+//Copyright Wintriss Technical Schools 2013
+import javax.swing.JOptionPane;
+
+import org.teachingextensions.logo.Colors;
+import org.teachingextensions.logo.Tortoise;
+
+public class FourSquare {
+	public static void main(String[] args) {
+		for (int i = 0; i < 4; i++) {
+			drawSquare();	
+		}
+		
+	}
+
+	static void drawSquare() {
+		Tortoise.setPenWidth(5);
+		Tortoise.setSpeed(10);
+		for (int i = 1; i <=4; i++) {
+		Tortoise.show();
+		Tortoise.setPenColor(Colors.getRandomColor());
+		Tortoise.move(100);
+		Tortoise.turn(90);
+		}
+		Tortoise.turn(90);
+		
+	}
+}
+
+

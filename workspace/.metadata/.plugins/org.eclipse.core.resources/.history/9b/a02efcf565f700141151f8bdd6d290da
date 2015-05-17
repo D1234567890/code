@@ -1,0 +1,34 @@
+package test;
+//Copyright Wintriss Technical Schools 2013
+import org.teachingextensions.logo.Colors;
+import org.teachingextensions.logo.Tortoise;
+
+public class TriangleShell {
+
+public static void main(String[] args) {
+	int length = 25;
+// 6. Do the following (up to step 9) 60 times
+	for(int a = 1; a <= 60; a++){
+// 8. Change the color of the line the tortoise draws to a random color
+		Tortoise.setPenColor(Colors.getRandomColor() );
+		drawTriangle(length);
+// 7. Increase the length of the side by 4 pixels
+// 9. Turn the tortoise 6 degrees to the right
+	}
+}
+
+private static void drawTriangle(int length) {
+	Tortoise.show();
+	Tortoise.setSpeed(10);
+	
+	
+	Tortoise.move(length);
+	Tortoise.turn(360/3);
+	Tortoise.move(length);
+	Tortoise.turn(360/3);
+	Tortoise.move(length);
+
+}
+}
+
+

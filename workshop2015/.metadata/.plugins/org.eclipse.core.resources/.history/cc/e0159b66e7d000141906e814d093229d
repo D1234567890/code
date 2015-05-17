@@ -1,0 +1,15 @@
+import java.util.Random;
+
+import javax.swing.JOptionPane;
+
+
+public class rjy
+{
+
+	public static void main(String[] args)
+	{
+		int a = new Random().nextInt(10);
+		JOptionPane.showInputDialog("Guess a number I'm thinking from 1-10!");
+	}
+
+}

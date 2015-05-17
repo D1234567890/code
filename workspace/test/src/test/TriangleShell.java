@@ -1,0 +1,32 @@
+package test;
+//Copyright Wintriss Technical Schools 2013
+import org.teachingextensions.logo.Colors;
+import org.teachingextensions.logo.Tortoise;
+
+public class TriangleShell {
+
+public static void main(String[] args) {
+	int length = 25;
+	for(int a = 1; a <= 60; a++){
+		drawTriangle(length);
+		Tortoise.setPenColor(Colors.getRandomColor());
+		length+=4;
+		Tortoise.turn(6);
+	}
+}
+
+private static void drawTriangle(int length) {
+	Tortoise.show();
+	Tortoise.setSpeed(10);
+	
+	
+	Tortoise.move(length);
+	Tortoise.turn(360/3);
+	Tortoise.move(length);
+	Tortoise.turn(360/3);
+	Tortoise.move(length);
+
+}
+}
+
+

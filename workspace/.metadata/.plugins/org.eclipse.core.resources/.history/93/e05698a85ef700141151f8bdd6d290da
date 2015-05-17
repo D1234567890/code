@@ -1,0 +1,27 @@
+package test;
+
+import java.io.IOException;
+
+import javax.swing.JOptionPane;
+
+public class Steven {
+	public static void main(String[] args) {
+	String type =
+	JOptionPane.showInputDialog("Type a scentence!");
+    // 3. repeat the sentence using the speak method below
+	speak(type);
+    // 4. make this repeat a lot of times
+	}
+static void speak(String words) {
+   	 try {
+   		 Runtime.getRuntime().exec("say " + words).waitFor();
+   	 } catch (Exception e) {
+   		 e.printStackTrace();
+   	 }
+    }
+
+}
+
+// Copyright Wintriss Technical Schools 2014
+
+

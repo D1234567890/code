@@ -1,0 +1,29 @@
+package test;
+
+import javax.swing.JOptionPane;
+
+public class TheRiddler {
+
+	public static void main(String[] args) {
+
+		int score = 0;
+		JOptionPane.showMessageDialog(null, score);
+		String riddle = JOptionPane
+				.showInputDialog("1, 2, 4, 5, 10, 20, 21, ? Answer what number the question mark is supposed to be!");
+		if (riddle.equalsIgnoreCase("42")) {
+			JOptionPane.showMessageDialog(null, "Correct!!");
+			score += 1;
+			JOptionPane.showMessageDialog(null, "score: " + score);
+		}
+		if (!riddle.equalsIgnoreCase("42")) {
+			String answer = JOptionPane
+					.showInputDialog("Wrong!  Would you want to know the answer?");
+			if (answer.equalsIgnoreCase("yes")) {
+				JOptionPane.showMessageDialog(null, "The answer is 42!");
+			}
+			if (answer.equalsIgnoreCase("no")) {
+				JOptionPane.showMessageDialog(null, "OK!  Bye!");
+			}
+		}
+	}
+}

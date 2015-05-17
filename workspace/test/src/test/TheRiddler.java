@@ -1,0 +1,54 @@
+package test;
+
+import javax.swing.JOptionPane;
+
+public class TheRiddler {
+
+	public static void main(String[] args) {
+
+		int score = 0;
+		JOptionPane.showMessageDialog(null, "score: " + score);
+		String riddle = JOptionPane
+				.showInputDialog("1, 2, 4, 5, 10, 20, 21, ? Answer what number the question mark is supposed to be!");
+		if (riddle.equalsIgnoreCase("42")) {
+			JOptionPane.showMessageDialog(null, "Correct!!");
+			score += 1;
+			JOptionPane.showMessageDialog(null, "score: " + score);
+			String ask = JOptionPane
+					.showInputDialog("Would you like another riddle?");
+			if (ask.equalsIgnoreCase("yes")) {
+				String hard = JOptionPane.showInputDialog("Decode this: ifmmp");
+				if (!hard.equalsIgnoreCase("hello")) {
+					String more = JOptionPane
+							.showInputDialog("Wrong!  Would you like to know your score?");
+					if(more.equalsIgnoreCase("yes")){
+						JOptionPane.showMessageDialog(null, "Your score is "+score+"!  Bye!");
+					}
+					if(more.equalsIgnoreCase("no")){
+						JOptionPane.showMessageDialog(null, "OK!  Bye");
+					}
+				}
+				if (hard.equalsIgnoreCase("hello")) {
+					JOptionPane.showMessageDialog(null, "Correct!");
+					score++;
+					JOptionPane.showMessageDialog(null, "score: " + score);
+					JOptionPane.showMessageDialog(null, "OK!  Bye!");
+				}
+			}
+			if (ask.equalsIgnoreCase("no")) {
+				JOptionPane.showMessageDialog(null,
+						"OK!  Bye!  And your score is " + score);
+			}
+		}
+		if (!riddle.equalsIgnoreCase("42")) {
+			String answer = JOptionPane
+					.showInputDialog("Wrong!  Would you want to know the answer?");
+			if (answer.equalsIgnoreCase("yes")) {
+				JOptionPane.showMessageDialog(null, "The answer is 42!");
+			}
+			if (answer.equalsIgnoreCase("no")) {
+				JOptionPane.showMessageDialog(null, "OK!  Bye!");
+			}
+		}
+	}
+}
